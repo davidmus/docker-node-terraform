@@ -1,9 +1,9 @@
-FROM node:13.10.1
+FROM node:latest
 
-ENV TF_VER 0.12.24
+ENV TERRAFORM_VERSION 0.12.24
 
-RUN wget -O terraform.zip https://releases.hashicorp.com/terraform/${TF_VER}/terraform_${TF_VER}_linux_amd64.zip && \
-  unzip terraform.zip && \
+RUN wget -O terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
+  unzip terraform.zip -d /usr/local/bin && \
   rm -f terraform.zip
 
 RUN curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh | bash
