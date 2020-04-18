@@ -12,4 +12,8 @@ RUN apt-get update && \
   apt-get --assume-yes install jq && \
   apt-get --assume-yes install default-jdk
 
+RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+RUN unzip awscliv2.zip
+RUN sudo ./aws/install
+
 CMD ["/bin/bash"]
