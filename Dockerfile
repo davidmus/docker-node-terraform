@@ -10,7 +10,8 @@ RUN curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/rele
 
 RUN apt-get update && \
   apt-get --assume-yes install jq && \
-  apt-get --assume-yes install default-jdk
+  apt-get --assume-yes install default-jdk && \
+  apt install docker.io
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
