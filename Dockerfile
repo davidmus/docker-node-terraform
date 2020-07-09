@@ -12,7 +12,7 @@ RUN apt-get update && \
   apt-get --assume-yes install jq && \
   apt-get --assume-yes install default-jdk && \
   apt install docker.io && \
-  apt-get --assume-yes install python2.7 && \
+  apt-get --assume-yes install python3.7 && \
   apt-get --assume-yes install awscli
 
 CMD ["/bin/bash"]
