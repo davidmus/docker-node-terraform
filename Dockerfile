@@ -11,7 +11,7 @@ RUN curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/rele
 RUN apt-get update && \
   apt-get --assume-yes install jq && \
   apt-get --assume-yes install default-jdk && \
-  apt-get --assume-yes install docker-ce docker-ce-cli containerd.io && \
+  apt-get --assume-yes install docker-ce docker-ce-cli && \
   apt-get --assume-yes install python3.7 && \
   apt-get --assume-yes install awscli
 
