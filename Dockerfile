@@ -14,7 +14,7 @@ RUN apt-get update && \
   apt-get --assume-yes install python3.7 && \
   apt-get --assume-yes install awscli
 
-curl -fsSL https://get.docker.com -o get-docker.sh
-sh get-docker.sh
+RUN curl -fsSL https://get.docker.com -o get-docker.sh
+RUN sh get-docker.sh
 
 CMD ["/bin/bash"]
