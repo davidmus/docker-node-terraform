@@ -8,9 +8,8 @@ RUN wget -O terraform.zip https://releases.hashicorp.com/terraform/${TERRAFORM_V
 
 RUN curl -L https://raw.githubusercontent.com/warrensbox/terraform-switcher/release/install.sh | bash
 
-RUN apt-get install -y python3 curl unzip git python3 jq
-
 RUN apt-get update && \
+  apt-get install -y python3 curl unzip git python3 jq && \
   apt-get --assume-yes install default-jdk && \
   apt-get --assume-yes install awscli
 
